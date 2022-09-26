@@ -3,7 +3,7 @@
 - Iris Dataset為基本的機器學習演算法資料，以鳶尾花的花瓣與花萼的長度、寬度預測屬於哪一類的鳶尾花。
 
 ## Dataset & Attribute
-- 由[UCI](https://archive.ics.uci.edu/ml/datasets/iris)網站取得共150筆資料集，包涵了三種不同的鳶尾花，每種類別個50筆資料：
+- 由[UCI](https://archive.ics.uci.edu/ml/datasets/iris)網站取得共150筆資料集，包含三種不同的鳶尾花，每種類別個50筆資料：
   - Setosa（山鳶尾）
   - Versicolor（變色鳶尾）
   - Virginica（維吉尼亞鳶尾）
