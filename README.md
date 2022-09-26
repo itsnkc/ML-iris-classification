@@ -90,7 +90,7 @@ print(classification_report(Y_validation, predictions))
 print(model)
 ```
 - Logistic迴歸分析
-```python=
+```python
 # Make predictions on validation dataset
 model = LogisticRegression()
 model.fit(X_train, Y_train)
