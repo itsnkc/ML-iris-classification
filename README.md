@@ -16,7 +16,7 @@
 
 ## Technology
 - Python, Anaconda
-- Scikit-learn, Numpy, pandas, matplotlib, Seaborn
+- Scikit-learn, pandas, Seaborn
 
 ---
 
