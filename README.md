@@ -39,18 +39,15 @@ print(df.shape)
 print(df.groupby('class').size())
 ```
 
-- 資料可視化
+- 資料視覺化
+    - 此部分利用Seaborn來實現，Seaborn是基於matplotlib的Python繪圖函式庫。
+    - pairplot展示變量的相互關係(線性or非線性)，對角線上為各屬性值的直方圖，而非對角線表示兩個不同屬性之間的關係。
 ```python
-df.hist()
-plt.show()
-
-scatter_matrix(df)
-plt.show()
-
 sns.pairplot(df, hue="class", height=2, palette='husl')
 ```
+![](https://i.imgur.com/u3eAsNR.png)
 
-## Model
+## Building Machine Learning Model
 
 ```python
 # Split-out validation dataset
@@ -93,7 +90,7 @@ print(classification_report(Y_validation, predictions))
 print(model)
 ```
 - Logistic迴歸分析
-```python
+```python=
 # Make predictions on validation dataset
 model = LogisticRegression()
 model.fit(X_train, Y_train)
@@ -116,3 +113,14 @@ print(confusion_matrix(Y_validation, predictions))
 print(classification_report(Y_validation, predictions))
 print(model)
 ```
+
+
+## Model Performance
+|           | 線性區別分析LDA | Logistic迴歸分析 | KNN最近鄰近法 |
+| --------- | --------------- | ---------------- | ------------- |
+| Accuracy  |   0.97          |    0.8           |   0.9         |
+| Precision |   0.97          |    0.85          |   0.92        |
+| Recall    |   0.97          |    0.83          |   0.91        |
+| F1-score  |   0.97          |    0.82          |   0.91        |
+
+綜上，線性區別分析LDA不論在準確率、精確度、召回率、F1分數都優於Logistic回歸分析、KNN最近鄰近法；反之，Logistic迴歸分析在三種演算法中，表現較差。
